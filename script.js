@@ -8,7 +8,7 @@ var randomizedArr= []
 
 // function to get the password options selected by the user
 
-function userSelected() {
+function generatePassword() {
     var numOfChars = prompt("How many characters would you like your password to contain")
     // var length = parseInt(numOfChars)
     if (isNaN(numOfChars)) {
@@ -21,24 +21,27 @@ function userSelected() {
 
     // ask for lowercase letters
     var lowercasePassword = confirm("Do you want lower case letter?")
-    randomizedArr = randomizedArr.concat(lowercasePassword)
+    randomizedArr = randomizedArr.concat(lowercase)
     // ask for uppercase letters
     var uppercasePassword = confirm("Do you want to use uppercase letters?")
-    randomizedArr = randomizedArr.concat(uppercasePassword)
+    randomizedArr = randomizedArr.concat(uppercase)
     // ask for numbers
     var numbersPassword = confirm("Do you want to use numbers?")
-    randomizedArr = randomizedArr.concat(numbersPassword)
+    randomizedArr = randomizedArr.concat(numberChars)
     //ask for special characters
     var specialPassword = confirm("Do you want to use special character?")
-    randomizedArr = randomizedArr.concat(specialPassword)
-
+    randomizedArr = randomizedArr.concat(specialChars)
 
     var newRandomPw = "";
-    // pick target number (pwLength) of characters from built array (finalPasswordArray)
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < numOfChars; i++) {
       newRandomPw += randomizedArr[Math.floor(Math.random() * randomizedArr.length)];
       
     }
+    
+    console.log(newRandomPw)
+    return newRandomPw
+
+
     var index = math.floor(math.random() * options.length);
     var userSelected = options[index];
     return user
@@ -57,39 +60,39 @@ var index = math.floor(math.random() * options.length);
 }
 
 // function to generate the password from user input
-function generatePassword() {
-    // create an empty variable to store the concatenated password
-    var choice = userSelected();
+// function generatePassword() {
+//     // create an empty variable to store the concatenated password
+//     var choice = userSelected();
     
-    // create an empty variable holding all possible password choices
-    // creat an empty variable to hold the chosen characters
+//     // create an empty variable holding all possible password choices
+//     // creat an empty variable to hold the chosen characters
 
-    //error handling to see if the object with your choices exist or not
+//     //error handling to see if the object with your choices exist or not
 
-    // Conditional statements are needed to add if the user has chosen special chars into an array of possible characters and must push new random chars to chosen array !!!!!!choice.obj is a filler!!!!!!
-    if (choice.obj) {
-        possibleChar = possibleChar.concat(specialChars)
-        pickedChar.push(randomSelected(specialChars));
-    }
+//     // Conditional statements are needed to add if the user has chosen special chars into an array of possible characters and must push new random chars to chosen array !!!!!!choice.obj is a filler!!!!!!
+//     if (choice.obj) {
+//         possibleChar = possibleChar.concat(specialChars)
+//         pickedChar.push(randomSelected(specialChars));
+//     }
     
-    //iterate over the password length from the choice made (obj), selecting random indexes from the array of possible chars and puts them into a result variable
-    for (var i = 0; index < choice.length; i++) {
-        var possibleChar = getSelection[i];
+//     //iterate over the password length from the choice made (obj), selecting random indexes from the array of possible chars and puts them into a result variable
+//     for (var i = 0; index < choice.length; i++) {
+//         var possibleChar = getSelection[i];
 
-    }
-    // BELOW IS A TEMPLATE CODE FOR THE ABOVE 
-    // for (let index = 0; index < array.length; index++) {
-    //     const element = array[index];
+//     }
+//     // BELOW IS A TEMPLATE CODE FOR THE ABOVE 
+//     // for (let index = 0; index < array.length; index++) {
+//     //     const element = array[index];
 
-    // }
+//     // }
 
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-    }
+//     for (let index = 0; index < array.length; index++) {
+//         const element = array[index];
+//     }
 
-    // combine the results and send them to the writePassword function to present on the page
+//     // combine the results and send them to the writePassword function to present on the page
 
-}
+// }
 
 // Assignment code
 var generateBtn = document.querySelector("#generate");
