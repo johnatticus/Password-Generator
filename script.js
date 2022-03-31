@@ -12,11 +12,12 @@ function generatePassword() {
     var numOfChars = prompt("How many characters would you like your password to contain")
     // var length = parseInt(numOfChars)
     if (isNaN(numOfChars)) {
-      alert("This is not a number, Please type a number. ")
+      alert("This is not a number. Please type a number. ")
       userSelected();
     }
     if (numOfChars < 8 || numOfChars > 128) {
       alert("password needs to be between the number 8 & 128.")
+      userSelected();
     } 
 
     // ask for lowercase letters
@@ -31,6 +32,8 @@ function generatePassword() {
     //ask for special characters
     var specialPassword = confirm("Do you want to use special character?")
     randomizedArr = randomizedArr.concat(specialChars)
+
+
 
     var newRandomPw = "";
     for (let i = 0; i < numOfChars; i++) {
