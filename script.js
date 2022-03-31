@@ -10,12 +10,12 @@ var randomizedArr= []
 
 function userSelected() {
     var numOfChars = prompt("How many characters would you like your password to contain")
-    var length = parseInt(numOfChars)
-    if (isNaN(length)) {
+    // var length = parseInt(numOfChars)
+    if (isNaN(numOfChars)) {
       alert("This is not a number, Please type a number. ")
       userSelected();
     }
-    if (length < 8 || length > 128) {
+    if (numOfChars < 8 || numOfChars > 128) {
       alert("password needs to be between the number 8 & 128.")
     } 
 
@@ -32,14 +32,18 @@ function userSelected() {
     var specialPassword = confirm("Do you want to use special character?")
     randomizedArr = randomizedArr.concat(specialPassword)
 
-    var randomizedPw = ""; // stores the randomized array
+
+    var newRandomPw = "";
     // pick target number (pwLength) of characters from built array (finalPasswordArray)
     for (let i = 0; i < length; i++) {
-      randomizedPw += randomizedArr[Math.floor(Math.random() * randomizedArr.length)];
+      newRandomPw += randomizedArr[Math.floor(Math.random() * randomizedArr.length)];
       
     }
+    var index = math.floor(math.random() * options.length);
+    var userSelected = options[index];
+    return user
+
     
-    return word
 }
 
 // need an array to randomize the elements selected from the user options
@@ -48,7 +52,7 @@ function randomSelected(randomizedArr) {
     // choose random characters in the array
     // return the random element 
 var index = math.floor(math.random() * options.length);
-    var computerChoice = options[index];
+    var userSelected = options[index];
 
 }
 
