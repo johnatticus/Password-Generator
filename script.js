@@ -24,9 +24,8 @@ function userSelected() {
       alert("password needs to be between the number 8 & 128.")
       // userSelected();
     } 
-    console.log(userSelected)
     // ask for lowercase letters
-    confirm("Do you want lower case letter?")
+    var lowercaseChar = confirm("Do you want lower case letter?")
 
     // ask for uppercase letters
     confirm("Do you want to use uppercase letters?")
