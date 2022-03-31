@@ -22,7 +22,19 @@ function userSelected() {
     }
     if (length < 8 || length > 128) {
       alert("password needs to be between the number 8 & 128.")
-    }
+      // userSelected();
+    } 
+
+    // ask for lowercase letters
+    confirm("Do you want lower case letter?")
+
+    // ask for uppercase letters
+    confirm("Do you want to use uppercase letters?")
+
+    // ask for numbers
+    confirm("Do you want to use numbers?")
+
+    //ask for special characters
     confirm("Do you want to use special character?")
 }
 
