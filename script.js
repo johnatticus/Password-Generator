@@ -14,8 +14,8 @@ function userSelected() {
     // if statement for the user choosing "no" throughout the selection
     // object to store all the user choices
     //return the object
-    var message = prompt("How many characters would you like your password to contain")
-    var length = parseInt(message)
+    var numOfChars = prompt("How many characters would you like your password to contain")
+    var length = parseInt(numOfChars)
     if (isNaN(length)) {
       alert("This is not a number, Please type a number. ")
       userSelected();
@@ -24,7 +24,7 @@ function userSelected() {
       alert("password needs to be between the number 8 & 128.")
       // userSelected();
     } 
-
+    console.log(userSelected)
     // ask for lowercase letters
     confirm("Do you want lower case letter?")
 
