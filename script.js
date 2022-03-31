@@ -26,15 +26,18 @@ function userSelected() {
     } 
     // ask for lowercase letters
     var lowercasePassword = confirm("Do you want lower case letter?")
+    randomizedArr = randomizedArr.concat(lowercasePassword)
 
     // ask for uppercase letters
     var uppercasePassword = confirm("Do you want to use uppercase letters?")
+    randomizedArr = randomizedArr.concat(uppercasePassword)
 
     // ask for numbers
     var numbersPassword = confirm("Do you want to use numbers?")
-
+    randomizedArr = randomizedArr.concat(numbersPassword)
     //ask for special characters
     var specialPassword = confirm("Do you want to use special character?")
+    randomizedArr = randomizedArr.concat(specialPassword)
 }
 
 // need an array to randomize the elements selected from the user options
