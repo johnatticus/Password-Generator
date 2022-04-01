@@ -23,16 +23,24 @@ function userSelected() {
     var lowercasePassword = confirm("Do you want lower case letter?")
     randomizedArr = randomizedArr.concat(lowercasePassword)
 
+    if (lowercasePassword) {
+      randomizedArr = randomizedArr.concat(lowercasePassword)
+
+    }
+    
+    console.log(randomizedArr)
     // ask for uppercase letters
     var uppercasePassword = confirm("Do you want to use uppercase letters?")
-    randomizedArr = randomizedArr.concat(uppercasePassword)
+    // randomizedArr = randomizedArr.concat(uppercasePassword)
+
+
 
     // ask for numbers
     var numbersPassword = confirm("Do you want to use numbers?")
-    randomizedArr = randomizedArr.concat(numbersPassword)
+    // randomizedArr = randomizedArr.concat(numbersPassword)
     //ask for special characters
     var specialPassword = confirm("Do you want to use special character?")
-    randomizedArr = randomizedArr.concat(specialPassword)
+    // randomizedArr = randomizedArr.concat(specialPassword)
 
     var randomizedPw = ""; // stores the randomized array
     // pick target number (pwLength) of characters from built array (finalPasswordArray)
