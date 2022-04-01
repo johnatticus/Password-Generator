@@ -6,11 +6,10 @@ const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 
 
 // function to get the password options selected by the user
-
 function generatePassword() {
+
     var randomizedArr= []
     var numOfChars = prompt("How many characters would you like your password to contain")
-    // var length = parseInt(numOfChars)
     if (isNaN(numOfChars)) {
       alert("This is not a number. Please type a number. ")
       generatePassword();
@@ -58,7 +57,6 @@ function generatePassword() {
       
     }
         
-    // console.log(newRandomPw)
     // enters our created password to this function for use with the function below
     return newRandomPw
     
