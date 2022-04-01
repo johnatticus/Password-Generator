@@ -22,53 +22,44 @@ function generatePassword() {
 
     // ask for lowercase letters
     var lowercasePassword = confirm("Do you want lower case letter?")
-    // randomizedArr = randomizedArr.concat(lowercase)
-
     if (lowercasePassword) {
         randomizedArr = randomizedArr.concat(lowercase)
-  
-      }
-      
-      console.log(randomizedArr)
-
+        }
+        // console.log(randomizedArr)
     
     // ask for uppercase letters
     var uppercasePassword = confirm("Do you want to use uppercase letters?")
-
     if (uppercasePassword) {
         randomizedArr = randomizedArr.concat(uppercase) 
-
         }
 
-    // randomizedArr = randomizedArr.concat(uppercase)
     // ask for numbers
     var numbersPassword = confirm("Do you want to use numbers?")
     if (numbersPassword) {
         randomizedArr = randomizedArr.concat(numberChars)
     }
-    // randomizedArr = randomizedArr.concat(numberChars)
-    //ask for special characters
+
+    // ask for special characters
     var specialPassword = confirm("Do you want to use special character?")
     if (specialPassword) {
         randomizedArr = randomizedArr.concat(specialChars)
     }
 
+    // if the user failed to select at least one of the options
     if (!lowercasePassword && !uppercasePassword && !numbersPassword && !specialPassword) {
         alert("You need to pick at least one.")
         generatePassword();
     }
     
-    // randomizedArr = randomizedArr.concat(specialChars)
-
-
-
+    // loop to get our new random password using the array we made above
     var newRandomPw = "";
     for (let i = 0; i < numOfChars; i++) {
       newRandomPw += randomizedArr[Math.floor(Math.random() * randomizedArr.length)];
       
     }
-    
-    console.log(newRandomPw)
+        
+    // console.log(newRandomPw)
+    // enters our created password to this function for use with the function below
     return newRandomPw
     
 }
