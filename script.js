@@ -8,12 +8,19 @@ const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 // function to get the password options selected by the user
 function generatePassword() {
 
-    var randomizedArr= []
+    var randomizedArr = []
+    var newRandomPw
+
+    // run through the prompts
     var numOfChars = prompt("How many characters would you like your password to contain")
+    
+    // make sure a number is chosen
     if (isNaN(numOfChars)) {
       alert("This is not a number. Please type a number. ")
       generatePassword();
     }
+
+    // make sure password is between 8 and 128 characters
     if (numOfChars < 8 || numOfChars > 128) {
       alert("password needs to be between the number 8 & 128.")
       generatePassword();
@@ -54,7 +61,7 @@ function generatePassword() {
     var newRandomPw = "";
     for (let i = 0; i < numOfChars; i++) {
       newRandomPw += randomizedArr[Math.floor(Math.random() * randomizedArr.length)];
-      
+     console.log(newRandomPw) 
     }
         
     // enters our created password to this function for use with the function below
@@ -70,6 +77,7 @@ function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
+  // display the password to the page
   passwordText.value = password;
 
 }
