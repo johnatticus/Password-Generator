@@ -54,7 +54,7 @@ function generatePassword() {
     // if the user failed to select at least one of the options
     if (!lowercasePassword && !uppercasePassword && !numbersPassword && !specialPassword) {
         alert("You need to pick at least one.")
-        generatePassword();
+        return null;
     }
     
     // loop to get our new random password using the array we made above
