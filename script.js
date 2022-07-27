@@ -17,13 +17,13 @@ function generatePassword() {
     // make sure a number is chosen
     if (isNaN(numOfChars)) {
       alert("This is not a number. Please type a number. ")
-      generatePassword();
+      return null;
     }
 
     // make sure password is between 8 and 128 characters
     if (numOfChars < 8 || numOfChars > 128) {
       alert("password needs to be between the number 8 & 128.")
-      generatePassword();
+      return null;
     } 
 
     // ask for lowercase letters
