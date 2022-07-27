@@ -1,6 +1,5 @@
 # Password Generator
-
-![screenshot](pwgeneratorscreenshot.png)
+![screenshot](https://raw.githubusercontent.com/johnatticus/Password_Generator/main/pwgeneratorscreenshot.png)
 
 **Password Generator for homework project #3**
 ### *by John Hysong*
@@ -18,3 +17,4 @@ If certain criteria were not met, the generator will alert the user to this.
 [Github Repo](https://github.com/johnatticus/Password_Generator)
 
 [Github Live Link](https://johnatticus.github.io/Password_Generator/)
+
