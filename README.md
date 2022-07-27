@@ -16,5 +16,5 @@ If certain criteria were not met, the generator will alert the user to this.
 
 [Github Repo](https://github.com/johnatticus/Password_Generator)
 
-[Github Live Link](https://johnatticus.github.io/Password_Generator/)
+[Live Link](https://johnatticus.github.io/Password_Generator/)
 
