@@ -9,14 +9,14 @@ const lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 function generatePassword() {
   
   // empty array to push characters to as we go through prompts
-  var randomizedArr = [];
+  let randomizedArr = [];
   // array to push manditory characters to guarantee one of all types selected is in final password
-  var manditoryArr = [];
+  let manditoryArr = [];
   // where we store final password as string to display on page
-  var newRandomPw = [];
+  let newRandomPw = [];
 
   // run through the prompts
-  var numOfChars = prompt(
+  let numOfChars = prompt(
     "How many characters would you like your password to contain"
   );
 
@@ -33,10 +33,10 @@ function generatePassword() {
   }
 
   // ask for lowercase letters
-  var lowercasePassword = confirm("Do you want lower case letter?");
+  let lowercasePassword = confirm("Do you want lower case letter?");
   if (lowercasePassword) {
     randomizedArr = randomizedArr.concat(lowercase);
-    var randomIndex = lowercase[Math.floor(Math.random() * lowercase.length)];
+    let randomIndex = lowercase[Math.floor(Math.random() * lowercase.length)];
     console.log(randomIndex)
     manditoryArr.push(randomIndex);
     console.log(manditoryArr)
@@ -44,10 +44,10 @@ function generatePassword() {
   console.log(randomizedArr);
 
   // ask for uppercase letters
-  var uppercasePassword = confirm("Do you want to use uppercase letters?");
+  let uppercasePassword = confirm("Do you want to use uppercase letters?");
   if (uppercasePassword) {
     randomizedArr = randomizedArr.concat(uppercase);
-    var randomIndex = uppercase[Math.floor(Math.random() * uppercase.length)];
+    let randomIndex = uppercase[Math.floor(Math.random() * uppercase.length)];
     console.log(randomIndex)
     manditoryArr.push(randomIndex);
     console.log(manditoryArr)
@@ -55,10 +55,10 @@ function generatePassword() {
   }
 
   // ask for numbers
-  var numbersPassword = confirm("Do you want to use numbers?");
+  let numbersPassword = confirm("Do you want to use numbers?");
   if (numbersPassword) {
     randomizedArr = randomizedArr.concat(numberChars);
-    var randomIndex = numOfChars[Math.floor(Math.random() * numOfChars.length)];
+    let randomIndex = numOfChars[Math.floor(Math.random() * numOfChars.length)];
     console.log(randomIndex)
     manditoryArr.push(randomIndex);
     console.log(manditoryArr)
@@ -66,10 +66,10 @@ function generatePassword() {
   }
 
   // ask for special characters
-  var specialPassword = confirm("Do you want to use special character?");
+  let specialPassword = confirm("Do you want to use special character?");
   if (specialPassword) {
     randomizedArr = randomizedArr.concat(specialChars);
-    var randomIndex = specialChars[Math.floor(Math.random() * specialChars.length)];
+    let randomIndex = specialChars[Math.floor(Math.random() * specialChars.length)];
     console.log(randomIndex)
     manditoryArr.push(randomIndex);
     console.log(manditoryArr)
@@ -104,17 +104,33 @@ function generatePassword() {
 }
 
 // Assignment code
-var generateBtn = document.querySelector("#generate");
+let generateBtn = document.querySelector("#generate");
+let copyBtn = document.querySelector("#copy");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   // display the password to the page
   passwordText.value = password;
 
 }
 
+function copyPassword() {
+  let copyText = document.getElementById("password");
+
+  // // Select the text field
+  // copyText.select();
+  // copyText.setSelectionRange(0, 99999); // For mobile devices
+
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+copyBtn.addEventListener("click", copyPassword);
